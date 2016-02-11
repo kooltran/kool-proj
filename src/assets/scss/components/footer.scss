@@ -1,14 +1,15 @@
 .footer {
   &-content {
     color: $color-white;
-    border-bottom: 1px solid $color-gray47;
   }
 
   &-blk {
     padding: 30px 0;
 
     .title {
-      margin-bottom: 10px;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+      border-bottom: 2px solid $color-gray47;
     }
   }
 
@@ -60,11 +61,71 @@
 
   .blk-box {
     margin-bottom: 25px;
+
+    .blk-list {
+      margin-bottom: 20px;
+
+      .ico-footer {
+        float: left;
+        font-size: 20px;
+        color: $color-white;
+        margin-right: 10px;
+        width: 20px;
+        height: 20px;
+      }
+
+      .footer-contact {
+        display: inline-block;
+      }
+    }
+  }
+
+  .blk-footer-menu {
+    .menu-title {
+      padding-bottom: 10px;
+      border-bottom: 2px solid $color-gray47;
+      border-width: 50%;
+    }
+
+    .menu-list {
+      padding: 20px 0;
+
+      li {
+        position: relative;
+        a {
+          padding: 10px 0;
+          color: $color-white;
+          font-size: 14px;
+          border-bottom: 1px dashed $color-gray47;
+
+          &:before {
+            content: "\f1d9";
+            font-family: 'FontAwesome';
+            font-size: 12px;
+            margin-right: 10px;
+          }
+        }
+      }
+    }
   }
 
   @media(max-width: $screen-sm) {
     .footer-blk {
       padding: 30px 20px;
     }
+  }
+}
+
+.blk-copyright {
+  padding: 10px;
+  background-color: $color-gray47;
+
+  a {
+    text-align: center;
+    color: $color-white;
+  }
+
+  p {
+    display: inline-block;
   }
 }
