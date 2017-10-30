@@ -1,0 +1,64 @@
+.footer {
+  &-content {
+    color: $color-white;
+    border-bottom: 1px solid $color-gray47;
+  }
+
+  &-blk {
+    padding: 30px 0;
+
+    .title {
+      margin-bottom: 10px;
+    }
+  }
+
+  &-payment {
+    width: 150px;
+  }
+
+  &-social {
+    li {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      line-height: 44px;
+      text-align: center;
+      border-radius: 30px;
+      margin-right: 10px;
+      border: 1px solid $color-gray47;
+
+      &.facebook {
+        &:hover {
+          background-color: $color-facebook;
+        }
+      }
+
+      &.youtube {
+        &:hover {
+          background-color: $color-youtube;
+        }
+      }
+
+      &.google {
+        &:hover {
+          background-color: $color-gg-plus;
+        }
+      }
+
+      &.instagram {
+        &:hover {
+          background-color: $color-gray16;
+        }
+      }
+
+      .ico {
+        font-size: 22px;
+        color: $color-white;
+      }
+    }
+  }
+
+  .blk-box {
+    margin-bottom: 25px;
+  }
+}
