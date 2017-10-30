@@ -1,0 +1,6 @@
+--timeout 5000
+--compilers js:babel-core/register
+--require jsdom-global/register
+--reporter list
+--globals $ ekino
+./test/**/*Test.js

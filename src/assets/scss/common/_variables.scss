@@ -1,0 +1,32 @@
+/* ==============================variables=================================== */
+
+/**
+ * custom variables definition
+ */
+$color-light-grey: #f3f3f3;
+$color-dark-grey: #888;
+$color-black: #000;
+$color-white: #fff;
+$color-gray60: #999;
+$color-gray80: #ccc;
+$color-gray47: #787878;
+$color-gray16: #292929;
+$color-gray42: #6b6b6b;
+$color-hotpink: #ff69b4;
+$color-border: rgba(0, 0, 0, 0.1);
+
+$todo-item-background-color: $color-light-grey;
+$fa-font-path: '../fonts/font-awesome/fonts';
+
+
+/**
+ * Bootstrap Variable overload from the vendor
+ * /vendor/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss
+ * Overloading MUST BE USED IN PRIORITY before overriding
+ */
+
+$border-radius: 0;
+$border-radius-lg: 0;
+$border-radius-sm: 0;
+
+$body-bg: $color-dark-grey;

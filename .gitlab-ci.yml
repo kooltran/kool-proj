@@ -1,0 +1,17 @@
+image: ekino/docker-buildbox:node6.9-2017.02.07
+stages:
+  - test
+  - build
+  - report
+test:
+  stage: test
+  tags: [ek-docker]
+  script:
+    - make install
+    - make test
+report_failure:
+  stage: report
+  tags: [ek-docker]
+  script:
+    - echo "fail..."
+  when: on_failure
