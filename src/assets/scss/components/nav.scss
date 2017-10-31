@@ -123,6 +123,8 @@
             top: 100%;
             left: 0;
             right: 0;
+            background-color: $color-black;
+            z-index: 1000;
 
             .mega-wrapper {
               padding: 10px;

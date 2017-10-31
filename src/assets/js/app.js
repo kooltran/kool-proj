@@ -1,12 +1,11 @@
 import $ from 'jquery';
 import 'bootstrap';
-import TodoList from './todo';
+import Homepage from './Homepage';
 
 
 const init = () => {
   const GLOBALS = {
     $window: $(window),
-    $body: $('body'),
     $doc: $(document),
     breakpoints: {
       sm: 768,
@@ -15,7 +14,7 @@ const init = () => {
     },
   };
 
-  TodoList.init();
+  Homepage.init();
 };
 
 $(() => {

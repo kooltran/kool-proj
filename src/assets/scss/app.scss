@@ -4,4 +4,8 @@
 @import 'common/general';
 @import "components/nav";
 @import "components/footer";
-@import "libs/font-awesome"
+@import "components/homepage";
+@import "libs/font-awesome";
+// import owl.carousel css
+@import '../../../node_modules/owl.carousel/src/scss/owl.carousel';
+@import "../../../node_modules/countdowntimer/dist/css/jQuery.countdownTimer"

@@ -1,0 +1,48 @@
+extends tmpl/layout/layout.pug
+
+block content
+  .homepage-content.container
+    section.homepage-carousel
+      .js-homepage-carousel.owl-carousel.owl-theme.carousel
+        .item
+          img(src="../../assets/img/pages/home_slider1.jpg", alt="home-slider1")
+        .item
+          img(src="../../assets/img/pages/home_slider2.jpg", alt="home-slider2")
+    section.product-banner
+      .row
+        .col-md-6.col-sm-6
+          .flash-prod.prod-box
+            .prod-counter.clearfix
+              .countdown-title
+              .countdown-timer
+                span.js-prod-days.days
+                | :
+                span.js-prod-hours.hours
+                | :
+                span.js-prod-mins.mins
+                | :
+                span.js-prod-secs.secs
+            .prod-img
+              img(src="../../assets/img/pages/product_img.png", alt="product-img")
+            .prod-id SP001
+            .prod-desc
+              .prod-name Product 1
+              .prod-price 69$
+        .col-md-6.col-sm-6
+          .hot-prod.prod-box
+            .prod-counter.clearfix
+              .countdown-title
+              .countdown-timer
+                span.js-prod-days.days
+                | :
+                span.js-prod-hours.hours
+                | :
+                span.js-prod-mins.mins
+                | :
+                span.js-prod-secs.secs
+            .prod-img
+              img(src="../../assets/img/pages/product_img.png", alt="product-img")
+            .prod-id SP002
+            .prod-desc
+              .prod-name Product 2
+              .prod-price 96$

@@ -1,0 +1,138 @@
+.homepage {
+  &-carousel {
+    margin: 0 -15px 30px;
+    border-bottom: 1px solid $color-gray47;
+
+    .owl-nav {
+      .owl-prev,
+      .owl-next {
+        position: absolute;
+        top: 50%;
+        display: inline-block;
+        color: $color-white;
+        font-size: 40px;
+      }
+
+      .owl-prev {
+        left: 20px;
+      }
+
+      .owl-next {
+        right: 20px;
+      }
+    }
+  }
+
+  &-content {
+    .product-banner {
+      border-bottom: 1px solid $color-gray47;
+      padding: 20px 0;
+
+      .prod-box {
+        padding: 0 55px;
+      }
+
+      .flash-prod {
+        border-right: 1px solid $color-gray47;
+
+        .countdown-title {
+          background-image: url('../../assets/img/icons/flash_sale.png');
+        }
+      }
+
+      .hot-prod {
+        .countdown-title {
+          background-image: url('../../assets/img/icons/hot_sale.png');
+        }
+      }
+
+      .prod-id {
+        padding: 5px 0;
+        border-bottom: 1px solid $color-gray47;
+      }
+
+      .prod-desc {
+        padding: 6px 0;
+      }
+
+      .prod-name {
+        display: inline-block;
+        text-transform: uppercase;
+        font-size: 16px;
+      }
+
+      .prod-price {
+        display: inline-block;
+        font-size: 16px;
+        color: $color-hotpink;
+        float: right;
+      }
+
+      .prod-counter {
+        padding: 10px 0;
+
+        .countdown-title {
+          display: block;
+          float: left;
+          width: 150px;
+          height: 40px;
+          margin-top: 10px;
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
+
+        .countdown-timer {
+          display: inline-block;
+          font-size: 30px;
+          float: right;
+
+          span {
+            display: inline-block;
+            text-align: center;
+            width: 40px;
+            height: 40px;
+            line-height: 35px;
+            background-color: $color-gray16;
+            border-radius: 2px;
+            border: 1px solid $color-gray42;
+            color: $color-hotpink;
+          }
+        }
+      }
+    }
+  }
+
+  @media(max-width: $screen-md) {
+    &-content {
+      .product-banner {
+        .prod-img {
+          text-align: center;
+        }
+
+        .prod-box {
+          padding: 10px 0;
+        }
+
+        .flash-prod {
+          border-right: 0;
+        }
+
+        .prod-counter {
+          .countdown-title {
+            width: 100px;
+            height: 35px;
+          }
+
+          .countdown-timer {
+            font-size: 20px;
+
+            span {
+              width: 35px;
+              height: 35px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

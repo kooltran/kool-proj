@@ -61,4 +61,10 @@
   .blk-box {
     margin-bottom: 25px;
   }
+
+  @media(max-width: $screen-sm) {
+    .footer-blk {
+      padding: 30px 20px;
+    }
+  }
 }
