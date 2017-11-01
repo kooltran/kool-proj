@@ -29,10 +29,6 @@
       padding: 20px 0;
     }
 
-    .prod-box {
-      padding: 0 55px;
-    }
-
     .flash-prod {
       border-right: 1px solid $color-gray47;
 
@@ -45,28 +41,6 @@
       .countdown-title {
         background-image: url('../../assets/img/icons/hot_sale.png');
       }
-    }
-
-    .prod-id {
-      padding: 5px 0;
-      border-bottom: 1px solid $color-gray47;
-    }
-
-    .prod-desc {
-      padding: 6px 0;
-    }
-
-    .prod-name {
-      display: inline-block;
-      text-transform: uppercase;
-      font-size: 16px;
-    }
-
-    .prod-price {
-      display: inline-block;
-      font-size: 16px;
-      color: $color-hotpink;
-      float: right;
     }
 
     .prod-counter {
@@ -132,6 +106,14 @@
     }
 
     .product-sale {
+      margin: 0 -15px;
+
+      .sale-title {
+        padding: 20px 0;
+        text-align: center;
+        font-size: 20px;
+      }
+
       .prod-box {
         padding: 0;
       }
@@ -139,7 +121,7 @@
   }
 
   &-banner {
-    margin: 0 -15px;
+    margin: 30px -15px 0 -15px;
   }
 
   @media(max-width: $screen-md) {

@@ -2,13 +2,14 @@ import 'owl.carousel';
 import '../../../../node_modules/countdowntimer/dist/js/jQuery.countdownTimer';
 
 export default class Homepage {
-  constructor() {
+  constructor(globals) {
     this.$homeCarousel = $('.js-homepage-carousel');
     this.$prodCountDown = $('.js-prod-countdown');
     this.$prodDays = $('.js-prod-days');
     this.$prodHours = $('.js-prod-hours');
     this.$prodMins = $('.js-prod-mins');
     this.$prodSecs = $('.js-prod-secs');
+    this.$window = globals.$window;
   }
 
   homeCarousel() {
@@ -20,8 +21,8 @@ export default class Homepage {
   }
 
   productCountDown() {
-    const countDownDate = new Date('Nov 1, 2017 16:50:25').getTime();
-    const countDown = setInterval(() => {
+    const countDownDate = new Date('Nov 16, 2017 16:50:25').getTime();
+    setInterval(() => {
       const now = new Date().getTime();
       const distance = countDownDate - now;
 
@@ -37,8 +38,8 @@ export default class Homepage {
     });
   }
 
-  static init() {
-    const homepage = new Homepage();
+  static init(globals) {
+    const homepage = new Homepage(globals);
 
     homepage.homeCarousel();
     homepage.productCountDown();

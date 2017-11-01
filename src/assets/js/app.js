@@ -14,7 +14,7 @@ const init = () => {
     },
   };
 
-  Homepage.init();
+  Homepage.init(GLOBALS);
 };
 
 $(() => {

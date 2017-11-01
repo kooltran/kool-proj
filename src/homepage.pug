@@ -1,7 +1,7 @@
 extends tmpl/layout/layout.pug
 
 block content
-  .homepage-content
+  .container.homepage-content
     section.homepage-carousel
       .js-homepage-carousel.owl-carousel.owl-theme.carousel
         .item
@@ -80,7 +80,9 @@ block content
               p.prod-name PRODUCT 6
     section.homepage-banner
       img(src="../../assets/img/pages/home_banner.jpg", alt="home-banner")
-    section.product-sale
+    section.container-fluid.product-sale
+      .sale-title
+        p SALE INFORMATION
       .row
         .col-md-3.col-sm-3.col-xs-6
           .prod-box
@@ -114,3 +116,4 @@ block content
             .prod-desc
               .prod-name Product Sale 4
               .prod-price 69$
+    hr.home-border
