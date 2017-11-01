@@ -1,0 +1,128 @@
+.cart {
+  .blk-cart-checkout {
+    .title {
+      padding: 20px 0 10px 20px;
+      border-bottom: 1px solid $color-gray47;
+      margin-bottom: 30px;
+
+      h3 {
+        font-size: 16px;
+      }
+    }
+
+    .blk-cart {
+      overflow: auto;
+
+      .form-title {
+        padding: 10px;
+        background-color: $color-white;
+        color: $color-black;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        margin: 0 0 10px;
+        min-width: 600px;
+        overflow: auto;
+      }
+
+      .form-content {
+        padding: 10px 0;
+        margin: 0;
+        background-color: $color-white;
+        color: $color-black;
+        min-width: 600px;
+
+        .prod-cart-img {
+          float: left;
+          width: 50%;
+        }
+
+        .prod-cart-info {
+          float: left;
+          padding: 0 20px;
+
+          .name {
+            font-size: 16px;
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: $color-black;
+          }
+        }
+
+        .prod-cart-quantum {
+          position: relative;
+          border: 1px solid $color-black;
+
+          a {
+            display: inline-block;
+            line-height: 25px;
+            font-size: 24px;
+            font-weight: bold;
+            color: $color-black;
+            text-align: center;
+            width: 22px;
+          }
+
+          .quantum-text {
+            border: none;
+            padding: 5px 0;
+            text-align: center;
+            width: calc(100% - 50px);
+            outline: none;
+          }
+        }
+
+        .prod-cart-price {
+          .price {
+            padding: 5px 0;
+            border: none;
+            width: 100%;
+            outline: none;
+
+            &::-webkit-input-placeholder {
+              color: $color-black;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+
+    .blk-checkout {
+      background-color: $color-white;
+      padding: 10px;
+
+      .total-price {
+        padding: 20px 0;
+
+        span {
+          font-size: 18px;
+          color: $color-black;
+          font-weight: bold;
+
+          &.price {
+            margin-left: 10px;
+          }
+        }
+      }
+
+      .btn-checkout,
+      .btn-addprodmore {
+        padding: 15px 0;
+        font-size: 15px;
+        background-color: $color-hotpink;
+        color: $color-white;
+        text-align: center;
+        font-weight: bold;
+        border-radius: 2px;
+        text-transform: uppercase;
+      }
+
+      .btn-addprodmore {
+        margin-top: 10px;
+        background-color: $color-black;
+        color: $color-white;
+      }
+    }
+  }
+}

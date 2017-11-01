@@ -1,0 +1,44 @@
+extends tmpl/layout/layout.pug
+
+block content
+  section.container.cart
+    .row
+      .col-md-9
+        .blk-cart-checkout
+          .title
+            h3 GIỎ HÀNG
+          .blk-cart
+            .form-title.row
+              .col-xs-6
+                p Tên Sản Phẩm
+              .col-xs-3
+                p Số Lượng
+              .col-xs-3
+                p Giá
+            .form-content.row
+              .col-xs-6
+                a.prod-cart-img(href="#")
+                  img(src="../../assets/img/pages/prod_sale1.jpg", alt="")
+                .prod-cart-info
+                  a.name(href="#") product 1
+                  p.sku SKU: DN572
+                  p.type LOẠI: Hồng
+              .col-xs-3
+                .prod-cart-quantum
+                  a.btn-minus(href="#") -
+                  input.quantum-text(type="text" value="0" min="0")
+                  a.btn-add(href="#") +
+              .col-xs-3
+                .prod-cart-price
+                  input.price(type="text" readonly placeholder="69$" val="69")
+      .col-md-3
+        .blk-cart-checkout
+          .title THANH TOÁN
+          .blk-checkout
+            .total-price
+              span Tổng Cộng:
+              span.price 69 
+              span $
+            a.btn-checkout(href="#") Thanh Toán
+            a.btn-addprodmore(href="#") Thanh Toán
+          

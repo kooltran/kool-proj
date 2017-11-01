@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import 'bootstrap';
 import Homepage from './Homepage';
+import Feature from './Feature';
 
 
 const init = () => {
@@ -15,6 +16,7 @@ const init = () => {
   };
 
   Homepage.init(GLOBALS);
+  Feature.init(GLOBALS);
 };
 
 $(() => {

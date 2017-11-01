@@ -1,5 +1,4 @@
 import 'owl.carousel';
-import '../../../../node_modules/countdowntimer/dist/js/jQuery.countdownTimer';
 
 export default class Homepage {
   constructor(globals) {
