@@ -1,0 +1,70 @@
+extends tmpl/layout/layout.pug
+
+block content    
+  section.container.product-detail
+    .breadscrumb
+      ul.breadscrumb-wrapper
+        li.breadscrumb-item
+          a(href="#") Home
+        li.breadscrumb-item
+          span Product Detail
+    .row
+      .col-sm-7
+        .blk-left-detail
+          .slide-content-wrapper
+            .owl-carousel.owl-theme.slide-content.content-owl-carousel
+              .slide
+                img.has-zoom(src="../assets/img/pages/prod_detail1.jpg", alt="")
+              .slide
+                img.has-zoom(src="../assets/img/pages/prod_detail2.jpg", alt="")
+              .slide
+                img.has-zoom(src="../assets/img/pages/prod_detail3.jpg", alt="")
+              .slide
+                img.has-zoom(src="../assets/img/pages/prod_detail4.jpg", alt="")
+              .slide
+                img.has-zoom(src="../assets/img/pages/prod_detail5.jpg", alt="")
+          .thumb-content-wrapper
+            .owl-carousel.owl-theme.thumb-content.thumbs-owl-carousel
+              .thumbs
+                img(src="../assets/img/pages/prod_detail1.jpg", alt="")
+              .thumbs
+                img(src="../assets/img/pages/prod_detail2.jpg", alt="")
+              .thumbs
+                img(src="../assets/img/pages/prod_detail3.jpg", alt="")
+              .thumbs
+                img(src="../assets/img/pages/prod_detail4.jpg", alt="")
+              .thumbs
+                img(src="../assets/img/pages/prod_detail5.jpg", alt="")
+      .col-sm-5
+        form.blk-right-detail
+          .detail-desc
+            .dt-title
+              p Product AAA
+            .dt-code
+              span SKU: 09938
+            .dt-price
+              span 69$
+          .detail-color
+            .color-title Color
+            input#color-1(type="radio" name="detail-color" checked)
+            label.color-label(for="color-1")
+              span.color-content.black
+            input#color-2(type="radio" name="detail-color")
+            label.color-label(for="color-2")
+              span.color-content.gray
+            input#color-3(type="radio" name="detail-color")
+            label.color-label(for="color-3")
+              span.color-content.pink
+            input#color-4(type="radio" name="detail-color")
+            label.color-label(for="color-4")
+              span.color-content.gold
+          .detail-size
+          .detail-quantum
+            .quantum-title Số lượng
+            .quantum-box
+              a.btn-minus(href="javascript:;") -
+              input.quantum-text(type="text" value="0" min="0")
+              a.btn-add(href="javascript:;") +
+          .detail-addtocart
+            button.btn-addtocart Thêm vào giỏ hàng
+          .detail-info

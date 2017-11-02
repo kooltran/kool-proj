@@ -32,6 +32,13 @@ a {
   }
 }
 
+input {
+  &[type='radio'],
+  &[type='checkbox'] {
+    display: none;
+  }
+}
+
 ul {
   padding: 0;
   margin: 0;

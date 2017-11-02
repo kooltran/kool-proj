@@ -1,0 +1,142 @@
+.product-detail {
+  .blk-left-detail {
+    padding: 30px 0;
+
+    .slide-content {
+      .slide {
+        max-width: 480px;
+        margin: 0 auto;
+      }
+
+      .owl-prev,
+      .owl-next {
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+
+        i {
+          font-size: 60px;
+        }
+      }
+
+      .owl-prev {
+        left: 15px;
+      }
+
+      .owl-next {
+        right: 15px;
+      }
+    }
+
+    .thumb-content {
+      padding: 20px;
+
+      .thumbs {
+        max-width: 100px;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  .blk-right-detail {
+    margin: 0 -15px;
+    padding: 30px 0;
+
+    .detail-desc {
+      padding-bottom: 20px;
+      border-bottom: 1px solid $color-gray47;
+
+      .dt-title {
+        font-size: 30px;
+        margin-bottom: 10px;
+      }
+
+      .dt-price {
+        color: $color-hotpink;
+      }
+    }
+
+    .detail-color {
+      .color-content {
+        position: relative;
+        display: inline-block;
+        width: 35px;
+        height: 35px;
+        border-radius: 2px;
+        border: 1px solid $color-gray47;
+
+        &.gray {
+          background-color: $color-gray47;
+        }
+
+        &.pink {
+          background-color: $color-hotpink;
+        }
+
+        &.gold {
+          background-color: $color-gold;
+        }
+      }
+
+      input {
+        &:checked {
+          + .color-label {
+            .color-content {
+              &:after {
+                display: inline-block;
+                position: absolute;
+                top: -3px;
+                width: 35px;
+                height: 35px;
+                background-image: url('../../assets/img/icons/icon_check_white.png');
+                background-size: cover;
+                content: '';
+              }
+            }
+          }
+        }
+      }
+
+      .color-title {
+        padding: 10px 0;
+        font-size: 15px;
+      }
+    }
+
+    .detail-quantum {
+      .quantum-box {
+        border-color: $color-gray47;
+        display: inline-block;
+        width: 200px;;
+
+        a {
+          color: $color-white;
+        }
+
+        input {
+          background-color: transparent;
+        }
+      }
+
+      .quantum-title {
+        font-size: 15px;
+        margin-bottom: 10px;
+      }
+    }
+
+    .detail-addtocart {
+      margin: 20px 0;
+
+      .btn-addtocart {
+        display: inline-block;
+        padding: 10px 20px;
+        border: 1px solid $color-gray47;
+        background-color: $color-white;
+        color: $color-black;
+        font-size: 16px;
+        text-transform: uppercase;
+        outline: none;
+      }
+    }
+  }
+}
