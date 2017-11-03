@@ -2,8 +2,7 @@
   padding-bottom: 30px;
   border-bottom: 1px solid $color-gray47;
 
-  .blk-login,
-  .blk-signup {
+  .blk-account {
     padding: 15px;
     border: 1px solid $color-gray47;
     color: $color-gray47;
@@ -35,5 +34,27 @@
 
   hr {
     margin: 10px 0;
+  }
+
+  .login-social {
+    padding: 1px 20px;
+
+    .btn-facebook,
+    .btn-ggplus {
+      padding: 6px 12px;
+      margin-bottom: 10px;
+      width: 150px;
+      color: $color-white;
+      font-size: 14px;
+    }
+
+    .btn-facebook {
+      background-color: $color-facebook;
+      margin-top: 10px;
+    }
+
+    .btn-ggplus {
+      background-color: $color-gg-plus;
+    }
   }
 }

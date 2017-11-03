@@ -11,7 +11,7 @@
     "path": {
         "sass": "assets/scss/",
         "css": "assets/css/",
-        "images": "assets/img/",
+        "images": "assets/images/",
         "sprites": "assets/sprites/",
         "fonts": "assets/fonts/",
         "js": "assets/js/",

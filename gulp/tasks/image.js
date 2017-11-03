@@ -14,7 +14,7 @@ gulp.task('sprity:build', function() {
     return sprity.src({
       src: conf.base.src + conf.path.sprites + conf.files.images,
       style: './sprites.css',
-      cssPath: '../img'
+      cssPath: '../images'
     })
     .pipe(gulpif('*.png', gulp.dest(conf.base.build + conf.path.images), gulp.dest(conf.base.build + conf.path.css)));
 });

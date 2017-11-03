@@ -11,37 +11,43 @@ block content
         li.breadscrumb-item
           span Đăng nhập & Đăng ký
     .row
-      .col-md-4
-        .blk-login
+      .col-sm-4
+        .blk-account
           h5.account-title Đăng Nhập
           hr
           p **Đăng nhập vào tài khoản của bạn để kiểm tra và theo dõi đơn hàng.
-          form.login-form
+          form.login-form.js-form-validate
             .form-group
               label(for='email') Email address:
-              input#email.form-control(type='email' placeholder="Email...")
+              input#email.form-control(type='email' name="login-email" placeholder="Email..." required)
             .form-group
               label(for='pwd') Password:
-              input#pwd.form-control(type='password' placeholder="Mật Khẩu...")
+              input#pwd.form-control(type='password' name="login-pwd" placeholder="Mật Khẩu..." required)
             button.btn-submit.btn-login Đăng Nhập
-      .col-md-4
-        .blk-signup
+      .col-sm-4
+        .blk-account
           h5.account-title Đăng Ký
           hr
           p **Tạo tài khoản để được hưởng những quyền lời từ công ty
-          form.login-form
+          form.login-form.js-form-validate
             .form-group
               label(for='email') Họ:
-              input#firstname.form-control(type='text' placeholder="Họ...")
+              input#firstname.form-control(type='text' name="signup-firstname" placeholder="Họ..." required)
             .form-group
               label(for='pwd') Tên:
-              input#lastname.form-control(type='text' placeholder="Tên...")
+              input#lastname.form-control(type='text' name="signup-lastname" placeholder="Tên..." required)
             .form-group
-              label(for='pwd') Địa Chỉ Email:
-              input#email.form-control(type='text' placeholder="Địa Chỉ Email...")
+              label(for='email') Địa Chỉ Email:
+              input#email.form-control(type='text' name="signup-email" placeholder="Địa Chỉ Email..." required)
             .form-group
               label(for='pwd') Mật Khẩu:
-              input#password.form-control(type='text' placeholder="Mật Khẩu...")
+              input#password.form-control(type='text' name="signup-pwd" placeholder="Mật Khẩu..." required)
             button.btn-submit.btn-login Đăng Ký
-      .col-md-4
-        .blk-login-social
+      .col-sm-4
+        .blk-account.blk-login-social
+          h5.account-title Đăng Ký Nhanh
+          hr
+          .login-social
+            p Đăng nhập hoặc tạo tài khoản với
+            a(href="#").btn-facebook Facebook
+            a(href="#").btn-ggplus Google

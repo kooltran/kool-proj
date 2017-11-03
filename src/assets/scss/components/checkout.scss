@@ -1,0 +1,112 @@
+.blk-checkout {
+  padding: 20px;
+  border-bottom: 1px solid $color-gray47;
+
+  input {
+    background-color: transparent;
+    border: 1px solid $color-gray47;
+    border-radius: 0;
+    outline: none;
+  }
+
+  textarea {
+    background-color: transparent;
+    width: 100%;
+    padding: 6px 12px;
+  }
+
+  .checkout-type {
+    .checkouttype-label {
+      margin-bottom: 15px;
+
+      @media(max-width: $screen-md) {
+        margin-right: 20px;
+      }
+    }
+
+    input {
+      &:checked {
+        & + .checkouttype-label {
+          span {
+            &:after {
+              display: inline-block;
+              position: absolute;
+              top: 2px;
+              left: 2px;
+              width: 12px;
+              height: 12px;
+              background-color: $color-gray47;
+              border-radius: 15px;
+              content: '';
+            }
+          }
+        }
+      }
+    }
+
+    span {
+      position: relative;
+      float: left;
+      width: 20px;
+      height: 20px;
+      border-radius: 20px;
+      border: 2px solid $color-gray47;
+      margin-right: 10px;
+    }
+  }
+
+  .checkout-info-confirm {
+    padding: 10px 20px;
+    border: 1px solid $color-gray47;
+
+    hr {
+      margin: 10px 0;
+    }
+
+    .cart-items {
+      .list-item {
+        padding: 10px 0;
+        border-bottom: 1px dashed $color-gray47;
+      }
+
+      .prod-name {
+        font-weight: 600;
+      }
+
+      .prod-price {
+        float: right;
+        color: $color-hotpink;
+        font-weight: 600;
+      }
+    }
+
+    .cart-total {
+      margin: 20px 0;
+      padding: 10px 20px;
+      background-color: $color-gray47;
+      font-size: 16px;
+
+      .total-price {
+        float: right;
+        color: $color-hotpink;
+        font-weight: 600;
+      }
+    }
+
+    .btn-checkout {
+      width: 100%;
+      font-size: 16px;
+      padding: 10px 12px;
+      background-color: transparent;
+      border: 1px solid $color-gray47;
+      border-radius: 0;
+      outline: none;
+
+      &:hover {
+        background-color: $color-gray47;
+        color: $color-black;
+        transition: all 1s;
+      }
+    }
+  }
+}

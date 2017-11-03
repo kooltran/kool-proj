@@ -1,0 +1,52 @@
+extends tmpl/layout/layout.pug
+
+block content
+  section.container.blk-checkout
+    form.row.js-form-validate
+        .col-md-4.col-sm-6
+          .checkout-info
+            h4 THÔNG TIN GIAO HÀNG
+            hr
+            .form-info
+              .form-group
+                input#fullname.form-control(type='text' placeholder="Họ Và Tên" name="checkout-fullname" required)
+              .form-group
+                input#pwd.form-control(type='number' placeholder="Số điện thoại" name="checkout-phonenumb" required)
+              .form-group
+                input#email.form-control(type="email" placeholder="Email" name="checkout-email" required)
+              .form-group
+                input#address.form-control(type="text" placeholder="Đia Chỉ" name="checkout-address" required)
+              .form-group
+                textarea(placeholder="Ghi Chú Đơn Hàng" name="checkout-note")
+        .col-md-4.col-sm-6
+          .checkout-type
+            h4 HÌNH THỨC THANH TOÁN
+            hr
+            .chk-type
+              input#checkout-now(type="radio" name="checkout-type" checked)
+              label.checkouttype-label(for="checkout-now")
+                span.checkout-now
+                | Thanh Toán Khi Giao Hàng
+              input#checkout-bank(type="radio" name="checkout-type")
+              label.checkouttype-label(for="checkout-bank")
+                span.checkout-bank
+                | Chuyển Khoản Qua Ngân Hàng
+        .col-md-4.col-xs-12
+          .checkout-info-confirm
+            h4 THÔNG TIN ĐƠN HÀNG
+            hr
+            .cart-items
+              .list-item
+                span.quantity 1 x 
+                span.prod-name TÊN SẢN PHẨM 1
+                p.prod-price 69$
+              .list-item
+                span.quantity 1 x 
+                span.prod-name TÊN SẢN PHẨM 2
+                p.prod-price 96$
+            .cart-total
+              span TỔNG CỘNG
+              span.total-price 165$
+            button.btn-checkout THANH TOÁN
+          
+            

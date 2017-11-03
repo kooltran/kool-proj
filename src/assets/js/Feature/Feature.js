@@ -1,4 +1,5 @@
 import '../../../../node_modules/lightbox2/dist/js/lightbox';
+import '../../../../node_modules/jquery-validation/dist/jquery.validate';
 
 export default class Feature {
   constructor() {
@@ -7,6 +8,7 @@ export default class Feature {
     this.$quantumText = $('.js-quantum-text');
     this.$thumbsProdCarousel = $('.js-thumbs-owl-carousel');
     this.$contentProdCarousel = $('.js-content-owl-carousel');
+    this.$formValidate = $('.js-form-validate');
   }
 
   quantumProduct() {
@@ -70,11 +72,29 @@ export default class Feature {
     });
   }
 
+  initValidateForm() {
+    this.$formValidate.each((v, form) => {
+      $(form).validate({
+    		submitHandler: function(form) {
+    			form.submit();
+    		}
+      });
+    });
+
+    $.extend($.validator.messages, {
+      required: 'Vui lòng điền thông tin vào',
+      email: 'Vui lòng nhập đúng email',
+      number: 'Vui lòng nhập đúng số điện thoại',
+    });
+
+  }
+
   static init(globals) {
     const feature = new Feature(globals);
 
     feature.quantumProduct();
     feature.initThumbCarousel();
+    feature.initValidateForm();
 
     return feature;
   }
