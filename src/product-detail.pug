@@ -12,19 +12,30 @@ block content
       .col-sm-7
         .blk-left-detail
           .slide-content-wrapper
-            .owl-carousel.owl-theme.slide-content.content-owl-carousel
+            .owl-carousel.owl-theme.slide-content.js-content-owl-carousel
               .slide
-                img.has-zoom(src="../assets/img/pages/prod_detail1.jpg", alt="")
+                a(rel="lightbox" href="../assets/img/pages/prod_detail1.jpg" data-lightbox="prod_detail1")
+                  img.has-zoom(src="../assets/img/pages/prod_detail1.jpg", alt="")
               .slide
-                img.has-zoom(src="../assets/img/pages/prod_detail2.jpg", alt="")
+                a(rel="lightbox" href="../assets/img/pages/prod_detail2.jpg" data-lightbox="prod_detail2")
+                  img.has-zoom(src="../assets/img/pages/prod_detail2.jpg", alt="")
               .slide
-                img.has-zoom(src="../assets/img/pages/prod_detail3.jpg", alt="")
+                a(rel="lightbox" href="../assets/img/pages/prod_detail3.jpg" data-lightbox="prod_detail3")
+                  img.has-zoom(src="../assets/img/pages/prod_detail3.jpg", alt="")
               .slide
-                img.has-zoom(src="../assets/img/pages/prod_detail4.jpg", alt="")
+                a(rel="lightbox" href="../assets/img/pages/prod_detail4.jpg" data-lightbox="prod_detai4")
+                  img.has-zoom(src="../assets/img/pages/prod_detail4.jpg", alt="")
               .slide
-                img.has-zoom(src="../assets/img/pages/prod_detail5.jpg", alt="")
+                a(rel="lightbox" href="../assets/img/pages/prod_detail5.jpg" data-lightbox="prod_detai5")
+                  img.has-zoom(src="../assets/img/pages/prod_detail5.jpg", alt="")
+              .slide
+                a(rel="lightbox" href="../assets/img/pages/home_slider1.jpg" data-lightbox="prod_detail6")
+                  img.has-zoom(src="../assets/img/pages/prod_detail1.jpg", alt="")
+              .slide
+                a(rel="lightbox" href="../assets/img/pages/prod_detail2.jpg" data-lightbox="prod_detai7")
+                  img.has-zoom(src="../assets/img/pages/prod_detail2.jpg", alt="")
           .thumb-content-wrapper
-            .owl-carousel.owl-theme.thumb-content.thumbs-owl-carousel
+            .owl-carousel.owl-theme.thumb-content.js-thumbs-owl-carousel
               .thumbs
                 img(src="../assets/img/pages/prod_detail1.jpg", alt="")
               .thumbs
@@ -35,13 +46,17 @@ block content
                 img(src="../assets/img/pages/prod_detail4.jpg", alt="")
               .thumbs
                 img(src="../assets/img/pages/prod_detail5.jpg", alt="")
+              .thumbs
+                img(src="../assets/img/pages/prod_detail1.jpg", alt="")
+              .thumbs
+                img(src="../assets/img/pages/prod_detail2.jpg", alt="")
       .col-sm-5
         form.blk-right-detail
           .detail-desc
             .dt-title
               p Product AAA
             .dt-code
-              span SKU: 09938
+              span SKU: 06996
             .dt-price
               span 69$
           .detail-color
@@ -62,9 +77,63 @@ block content
           .detail-quantum
             .quantum-title Số lượng
             .quantum-box
-              a.btn-minus(href="javascript:;") -
-              input.quantum-text(type="text" value="0" min="0")
-              a.btn-add(href="javascript:;") +
+              a.btn-minus.js-btn-minus(href="javascript:;") -
+              input.quantum-text.js-quantum-text(type="text" value="0" min="0")
+              a.btn-add.js-btn-add(href="javascript:;") +
           .detail-addtocart
             button.btn-addtocart Thêm vào giỏ hàng
-          .detail-info
+          .detail-more-info
+            ul.info-list
+              li Hỗ trợ chăm sóc khách hàng miễn phí
+              li Hỗ trợ giao hàng miễn phí trong nội thành
+              li Giảm giá 10% cho khách hàng có thẻ VIP
+    .product-detail-info
+      ul.nav.nav-tabs.detail-tab-title
+        li.active
+          a(data-toggle='tab', href='#detail-prod-info') Thông tin sản phẩm
+        li
+          a(data-toggle='tab', href='#detail-prod-comment') nhận xét
+      .tab-content.detail-tab-panel
+        #detail-prod-info.tab-pane.fade.in.active
+          p
+            | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book
+        #detail-prod-comment.tab-pane.fade
+          h3 Nhận Xét
+          p
+            | Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    .blk-related-product
+      .blk-title
+        p Có thể bạn sẽ thích
+      .row
+        .col-md-3.col-sm-3.col-xs-6
+          .prod-box
+            .prod-img
+              img(src="../../assets/img/pages/prod_sale1.jpg", alt="product-img")
+            .prod-id SP001
+            .prod-desc
+              .prod-name Product Sale 1
+              .prod-price 69$
+        .col-md-3.col-sm-3.col-xs-6
+          .prod-box
+            .prod-img
+              img(src="../../assets/img/pages/prod_sale2.jpg", alt="product-img")
+            .prod-id SP001
+            .prod-desc
+              .prod-name Product Sale 2
+              .prod-price 69$
+        .col-md-3.col-sm-3.col-xs-6
+          .prod-box
+            .prod-img
+              img(src="../../assets/img/pages/prod_sale3.jpg", alt="product-img")
+            .prod-id SP001
+            .prod-desc
+              .prod-name Product Sale 3
+              .prod-price 69$
+        .col-md-3.col-sm-3.col-xs-6
+          .prod-box
+            .prod-img
+              img(src="../../assets/img/pages/prod_sale4.jpg", alt="product-img")
+            .prod-id SP001
+            .prod-desc
+              .prod-name Product Sale 4
+              .prod-price 69$

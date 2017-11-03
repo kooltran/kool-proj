@@ -67,11 +67,13 @@
     "webpack-stream": "~4.0.0"
   },
   "dependencies": {
+    "@zeitiger/elevatezoom": "^2.5.4",
     "bootstrap": "^3.3.7",
     "bootstrap-sass": "^3.3.7",
     "bootstrap-slider": "^9.7.0",
     "bootstrap-tabcollapse": "^0.2.6",
     "jquery": "^3.2.1",
+    "lightbox2": "^2.9.0",
     "owl.carousel": "^2.2.0"
   }
 }

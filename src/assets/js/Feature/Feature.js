@@ -1,8 +1,12 @@
+import '../../../../node_modules/lightbox2/dist/js/lightbox';
+
 export default class Feature {
-  constructor(globals) {
-    this.$btnAdd = $('.btn-add');
-    this.$btnMinus = $('.btn-minus');
-    this.$quantumText = $('.quantum-text');
+  constructor() {
+    this.$btnAdd = $('.js-btn-add');
+    this.$btnMinus = $('.js-btn-minus');
+    this.$quantumText = $('.js-quantum-text');
+    this.$thumbsProdCarousel = $('.js-thumbs-owl-carousel');
+    this.$contentProdCarousel = $('.js-content-owl-carousel');
   }
 
   quantumProduct() {
@@ -20,11 +24,9 @@ export default class Feature {
   }
 
   initThumbCarousel() {
-    const $thumbs = $('.thumbs-owl-carousel');
-    const $contents = $('.content-owl-carousel');
-    $thumbs.each((i, v) => {
+    this.$thumbsProdCarousel.each((i, v) => {
       const $thumb = $(v);
-      const $content = $contents.eq(i);
+      const $content = this.$contentProdCarousel.eq(i);
 
       // put the class current on first element
       $thumb.on('initialized.owl.carousel', () => {
@@ -53,6 +55,7 @@ export default class Feature {
         dots: false,
         loop: false,
         responsiveRefreshRate: 100,
+        navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
       });
 
       // Init content owl carousel
@@ -67,16 +70,11 @@ export default class Feature {
     });
   }
 
-  initElevateZoom() {
-    $('.has-zoom').elevateZoom();
-  }
-
   static init(globals) {
     const feature = new Feature(globals);
 
     feature.quantumProduct();
     feature.initThumbCarousel();
-    // feature.initElevateZoom();
 
     return feature;
   }

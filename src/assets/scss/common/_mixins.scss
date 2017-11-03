@@ -154,6 +154,31 @@ $color-default-double-border-three: #000;
   box-shadow:         0 0 0 1px $color-two, 0 0 0 2px $color-three;
 }
 
+@mixin multiLineEllipsis($lineHeight: 1.2em, $lineCount: 1, $bgColor: white){
+  overflow: hidden;
+  position: relative;
+  line-height: $lineHeight;
+  max-height: $lineHeight * $lineCount;
+  text-align: justify;
+  margin-right: -2em;
+  padding-right: 4em;
+  &:before {
+    content: '...';
+    position: absolute;
+    right: 38px;
+    bottom: 2px;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 1em;
+    height: 1em;
+    margin-top: 0.2em;
+    background: $bgColor;
+  }
+}
+
 %clearfix {
   &::after {
     display: block;

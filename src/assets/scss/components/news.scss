@@ -1,0 +1,33 @@
+.blk-news {
+  border-bottom: 1px solid $color-gray47;
+
+  .news-wrapper {
+    .news-item {
+      margin-bottom: 30px;
+    }
+
+    .news-title {
+      font-size: 18px;
+      text-transform: uppercase;
+      padding: 20px 15px;
+    }
+
+    .article-content {
+      padding: 10px 0;
+    }
+
+    .article-date {
+      font-size: 14px;
+    }
+
+    .article-name {
+      font-size: 16px;
+      margin: 8px 0;
+    }
+
+    .article-text {
+      @include multiLineEllipsis($lineHeight: 1.2em, $lineCount: 3, $bgColor: #fff);
+      font-size: 12px;
+    }
+  }
+}

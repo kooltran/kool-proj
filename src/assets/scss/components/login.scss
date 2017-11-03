@@ -1,0 +1,39 @@
+.blk-login-signup {
+  padding-bottom: 30px;
+  border-bottom: 1px solid $color-gray47;
+
+  .blk-login,
+  .blk-signup {
+    padding: 15px;
+    border: 1px solid $color-gray47;
+    color: $color-gray47;
+    font-size: 13px;
+  }
+
+  .login-form {
+    margin: 10px 0;
+  }
+
+  .account-title {
+    color: $color-white;
+  }
+
+  input {
+    border: none;
+    border-radius: 0;
+    outline: none;
+  }
+
+  .btn-submit {
+    padding: 6px 12px;
+    background-color: transparent;
+    border: 1px solid $color-gray47;
+    border-radius: 0;
+    outline: none;
+    margin-top: 10px;
+  }
+
+  hr {
+    margin: 10px 0;
+  }
+}
