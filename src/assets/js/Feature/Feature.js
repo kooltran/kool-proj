@@ -9,6 +9,7 @@ export default class Feature {
     this.$thumbsProdCarousel = $('.js-thumbs-owl-carousel');
     this.$contentProdCarousel = $('.js-content-owl-carousel');
     this.$formValidate = $('.js-form-validate');
+    this.$toggleMobileMenu = $('.js-toogle-menu-mobile');
   }
 
   quantumProduct() {
@@ -89,12 +90,25 @@ export default class Feature {
 
   }
 
+  initToggleMenuMobile() {
+    this.$toggleMobileMenu.click((e) => {
+      const $parentLevel1 = $(e.currentTarget).parent();
+      console.log($parentLevel1);
+      if ($parentLevel1.hasClass('active')) {
+        $parentLevel1.removeClass('active');
+      } else {
+        $parentLevel1.addClass('active');
+      }
+    });
+  }
+
   static init(globals) {
     const feature = new Feature(globals);
 
     feature.quantumProduct();
     feature.initThumbCarousel();
     feature.initValidateForm();
+    feature.initToggleMenuMobile();
 
     return feature;
   }

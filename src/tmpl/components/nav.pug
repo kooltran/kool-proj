@@ -23,13 +23,13 @@ section.header
                 a(href="#")
                   i.fa.fa-heart.ico
       .header-menu.clearfix
-        .pull-left.col-lg-5.col-md-3.col-sm-3.col-xs-12
+        .col-lg-5.col-md-3.col-sm-3.col-xs-12
           .mobile-burger
-            button.btn-burger.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#menu-content')
+            button.btn-burger.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#menu-mobile')
               span.sr-only Toggle navigation
-              span.icon-bar
-              span.icon-bar
-              span.icon-bar
+              span.icon-bar.first
+              span.icon-bar.second
+              span.icon-bar.third
           .header-logo.mobile-logo
             a.logo(href="#")
               img(src="../../assets/images/icons/home_logo.png")
@@ -45,13 +45,13 @@ section.header
             li.icon
               a(href="#")
                 i.fa.fa-heart.ico
-        .pull-right.col-lg-7.col-md-9.col-sm-9.col-xs-12
-          .mega-menu.clearfix
-            ul.pull-right.main-menu
+        .col-lg-7.col-md-9.col-sm-9.col-xs-12
+          #menu-mobile.mega-menu.clearfix.collapse
+            ul.pull-right.main-menu.clearfix
               li.dropdown.has-menu
                 a.menu-item(href="#") Trang Chủ
               li.dropdown.has-menu.has-mega
-                a.menu-item(href="#") Sản Phẩm
+                a.menu-item.js-toogle-menu-mobile(href="#") Sản Phẩm
                 ul.sub-level1-menu
                   .mega-wrapper.clearfix
                     .blk-img
@@ -59,7 +59,7 @@ section.header
                         img(src="../../assets/images/menu/menu_item_img.jpg")
                     ul.blk-menu
                       li.has-sub.sub-item-level1
-                        a.sub-item(href="#") Áo Sơ Mi
+                        a.sub-item.js-toogle-menu-mobile(href="#") Áo Sơ Mi
                         ul.sub-level2-menu
                           li
                             a(href="#") Áo Sơ Mi Tay Ngắn
@@ -76,7 +76,7 @@ section.header
                           li
                             a(href="#") Áo Sơ Mi Cho Nam
                       li.has-sub.sub-item-level1
-                        a.sub-item(href="#") Quần Jean
+                        a.sub-item.js-toogle-menu-mobile(href="#") Quần Jean
                         ul.sub-level2-menu
                           li
                             a(href="#") Quần Jean Cho Nam
@@ -93,7 +93,7 @@ section.header
                           li
                             a(href="#") Quần Jean Loại 5
                       li.has-sub.sub-item-level1
-                        a.sub-item(href="#") Áo Khoác
+                        a.sub-item.js-toogle-menu-mobile(href="#") Áo Khoác
                         ul.sub-level2-menu
                           li
                             a(href="#") Áo Khoác Cho Nam
@@ -110,7 +110,7 @@ section.header
                           li
                             a(href="#") Áo Khoác
                       li.has-sub.sub-item-level1
-                        a.sub-item(href="#") Quần Áo Ngủ
+                        a.sub-item.js-toogle-menu-mobile(href="#") Quần Áo Ngủ
                         ul.sub-level2-menu
                           li
                             a(href="#") Quần Áo Ngủ Loại 1
@@ -127,7 +127,7 @@ section.header
                           li
                             a(href="#") Quần Áo Ngủ Loại 7
                       li.has-sub.sub-item-level1
-                        a.sub-item(href="#") Quần Áo Tắm
+                        a.sub-item.js-toogle-menu-mobile(href="#") Quần Áo Tắm
                         ul.sub-level2-menu
                           li
                             a(href="#") Quần Áo Tắm Loại 1
@@ -144,7 +144,7 @@ section.header
                           li
                             a(href="#") Quần Áo Tắm Loại 7
                       li.has-sub.sub-item-level1
-                        a.sub-item(href="#") Phụ Kiện
+                        a.sub-item.js-toogle-menu-mobile(href="#") Phụ Kiện
                         ul.sub-level2-menu
                           li
                             a(href="#") Phụ Kiện Loại 1
@@ -161,7 +161,7 @@ section.header
                           li
                             a(href="#") Phụ Kiện Loại 7
               li.dropdown.has-menu.has-mega
-                a.menu-item(href="#") Khuyến Mãi
+                a.menu-item.js-toogle-menu-mobile(href="#") Khuyến Mãi
                 ul.sub-level1-menu
                   .mega-wrapper.clearfix
                     .blk-img
@@ -185,26 +185,26 @@ section.header
               li.dropdown.has-menu
                 a.menu-item(href="#") Tâm Sự
               li.dropdown.has-menu.has-mega
-                a.menu-item(href="#") Tin Tức
+                a.menu-item.js-toogle-menu-mobile(href="#") Tin Tức
                 ul.sub-level1-menu
                   .mega-wrapper.clearfix
                     .blk-img
                       a(href="#")
                         img(src="../../assets/images/menu/menu_item_img.jpg")
                     ul.blk-menu
-                      li.has-sub.sub-item-level1
+                      li.sub-item-level1
                         a.sub-item(href="#") Tin tức quận 1
-                      li.has-sub.sub-item-level1
+                      li.sub-item-level1
                         a.sub-item(href="#") Tin tức quận 2
-                      li.has-sub.sub-item-level1
+                      li.sub-item-level1
                         a.sub-item(href="#") Tin tức quận 3
-                      li.has-sub.sub-item-level1
+                      li.sub-item-level1
                         a.sub-item(href="#") Tin tức quận 4
-                      li.has-sub.sub-item-level1
+                      li.sub-item-level1
                         a.sub-item(href="#") Tin tức quận 5
-                      li.has-sub.sub-item-level1
+                      li.sub-item-level1
                         a.sub-item(href="#") Tin tức quận 6
-                      li.has-sub.sub-item-level1
+                      li.sub-item-level1
                         a.sub-item(href="#") Tin tức quận 7
               li.dropdown.has-menu
                 a.menu-item(href="#") Liên Hệ
