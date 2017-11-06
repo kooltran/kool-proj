@@ -9,7 +9,8 @@ export default class Feature {
     this.$thumbsProdCarousel = $('.js-thumbs-owl-carousel');
     this.$contentProdCarousel = $('.js-content-owl-carousel');
     this.$formValidate = $('.js-form-validate');
-    this.$toggleMobileMenu = $('.js-toogle-menu-mobile');
+    this.$toggleMobileSubMenu = $('.js-toogle-submenu-mobile');
+    this.$toggleMobileMenu = $('.js-toggle-menu-mobile');
   }
 
   quantumProduct() {
@@ -87,18 +88,24 @@ export default class Feature {
       email: 'Vui lòng nhập đúng email',
       number: 'Vui lòng nhập đúng số điện thoại',
     });
-
   }
 
   initToggleMenuMobile() {
-    this.$toggleMobileMenu.click((e) => {
+    this.$toggleMobileSubMenu.click((e) => {
       const $parentLevel1 = $(e.currentTarget).parent();
-      console.log($parentLevel1);
       if ($parentLevel1.hasClass('active')) {
         $parentLevel1.removeClass('active');
       } else {
         $parentLevel1.addClass('active');
       }
+    });
+
+    this.$toggleMobileMenu.click((e) => {
+      const $parent = $(e.currentTarget).parents('body');
+      $parent.addClass('slide-menu-mb');
+      $parent.find('.mb-menu-mask').click(() => {
+        $parent.removeClass('slide-menu-mb');
+      });
     });
   }
 

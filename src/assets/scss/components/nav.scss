@@ -226,22 +226,6 @@
 
         .icon-bar {
           background-color: $color-gray47;
-
-          &.first {
-            position: relative;
-            top: 6px;
-            transform: rotate(45deg)
-          }
-
-          &.third {
-            position: relative;
-            top: -6px;
-            transform: rotate(135deg)
-          }
-
-          &.second {
-            opacity: 0;
-          }
         }
 
         &.collapsed {
@@ -355,6 +339,13 @@
       }
 
       .mega-menu {
+        position: fixed;
+        top: 0;
+        left: -80%;
+        right: 0;
+        bottom: 0;
+        width: 80%;
+        height: 100%;
         float: none;
         background-color: $color-white;
         margin: 0;
@@ -363,6 +354,13 @@
         .main-menu {
           float: none !important;
           margin: 0;
+
+          .mb-menu-title {
+            text-align: center;
+            color: $color-black;
+            border-bottom: 1px solid $color-gray47;
+            padding: 15px 0;
+          }
 
           .has-mega {
             position: relative;
@@ -532,6 +530,56 @@
                   }
                 }
               }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.main-wrapper {
+  transform: translateX(0);
+  transition: transform .5s ease;
+}
+
+@media(max-width: $screen-sm) {
+  .slide-menu-mb {
+    .main-wrapper {
+      transform: translateX(80%);
+      transition: transform .5s;
+
+      .mb-menu-mask {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 100%;
+        z-index: 10000;
+      }
+
+      .mega-menu {
+        display: block;
+      }
+
+      .mobile-burger {
+        .btn-burger {
+          .icon-bar {
+            &.first {
+              position: relative;
+              top: 6px;
+              transform: rotate(45deg)
+            }
+
+            &.third {
+              position: relative;
+              top: -6px;
+              transform: rotate(135deg)
+            }
+
+            &.second {
+              opacity: 0;
             }
           }
         }

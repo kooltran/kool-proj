@@ -25,7 +25,7 @@ section.header
       .header-menu.clearfix
         .col-lg-5.col-md-3.col-sm-3.col-xs-12
           .mobile-burger
-            button.btn-burger.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#menu-mobile')
+            button.btn-burger.navbar-toggle.js-toggle-menu-mobile
               span.sr-only Toggle navigation
               span.icon-bar.first
               span.icon-bar.second
@@ -46,12 +46,14 @@ section.header
               a(href="#")
                 i.fa.fa-heart.ico
         .col-lg-7.col-md-9.col-sm-9.col-xs-12
-          #menu-mobile.mega-menu.clearfix.collapse
+          .mb-menu-mask
+          .mega-menu.clearfix
             ul.pull-right.main-menu.clearfix
+              p.mb-menu-title.visible-xs Menu
               li.dropdown.has-menu
                 a.menu-item(href="#") Trang Chủ
               li.dropdown.has-menu.has-mega
-                a.menu-item.js-toogle-menu-mobile(href="#") Sản Phẩm
+                a.menu-item.js-toogle-submenu-mobile(href="#") Sản Phẩm
                 ul.sub-level1-menu
                   .mega-wrapper.clearfix
                     .blk-img
@@ -59,7 +61,7 @@ section.header
                         img(src="../../assets/images/menu/menu_item_img.jpg")
                     ul.blk-menu
                       li.has-sub.sub-item-level1
-                        a.sub-item.js-toogle-menu-mobile(href="#") Áo Sơ Mi
+                        a.sub-item.js-toogle-submenu-mobile(href="#") Áo Sơ Mi
                         ul.sub-level2-menu
                           li
                             a(href="#") Áo Sơ Mi Tay Ngắn
@@ -76,7 +78,7 @@ section.header
                           li
                             a(href="#") Áo Sơ Mi Cho Nam
                       li.has-sub.sub-item-level1
-                        a.sub-item.js-toogle-menu-mobile(href="#") Quần Jean
+                        a.sub-item.js-toogle-submenu-mobile(href="#") Quần Jean
                         ul.sub-level2-menu
                           li
                             a(href="#") Quần Jean Cho Nam
@@ -93,7 +95,7 @@ section.header
                           li
                             a(href="#") Quần Jean Loại 5
                       li.has-sub.sub-item-level1
-                        a.sub-item.js-toogle-menu-mobile(href="#") Áo Khoác
+                        a.sub-item.js-toogle-submenu-mobile(href="#") Áo Khoác
                         ul.sub-level2-menu
                           li
                             a(href="#") Áo Khoác Cho Nam
@@ -110,7 +112,7 @@ section.header
                           li
                             a(href="#") Áo Khoác
                       li.has-sub.sub-item-level1
-                        a.sub-item.js-toogle-menu-mobile(href="#") Quần Áo Ngủ
+                        a.sub-item.js-toogle-submenu-mobile(href="#") Quần Áo Ngủ
                         ul.sub-level2-menu
                           li
                             a(href="#") Quần Áo Ngủ Loại 1
@@ -127,7 +129,7 @@ section.header
                           li
                             a(href="#") Quần Áo Ngủ Loại 7
                       li.has-sub.sub-item-level1
-                        a.sub-item.js-toogle-menu-mobile(href="#") Quần Áo Tắm
+                        a.sub-item.js-toogle-submenu-mobile(href="#") Quần Áo Tắm
                         ul.sub-level2-menu
                           li
                             a(href="#") Quần Áo Tắm Loại 1
@@ -144,7 +146,7 @@ section.header
                           li
                             a(href="#") Quần Áo Tắm Loại 7
                       li.has-sub.sub-item-level1
-                        a.sub-item.js-toogle-menu-mobile(href="#") Phụ Kiện
+                        a.sub-item.js-toogle-submenu-mobile(href="#") Phụ Kiện
                         ul.sub-level2-menu
                           li
                             a(href="#") Phụ Kiện Loại 1
@@ -161,7 +163,7 @@ section.header
                           li
                             a(href="#") Phụ Kiện Loại 7
               li.dropdown.has-menu.has-mega
-                a.menu-item.js-toogle-menu-mobile(href="#") Khuyến Mãi
+                a.menu-item.js-toogle-submenu-mobile(href="#") Khuyến Mãi
                 ul.sub-level1-menu
                   .mega-wrapper.clearfix
                     .blk-img
@@ -185,7 +187,7 @@ section.header
               li.dropdown.has-menu
                 a.menu-item(href="#") Tâm Sự
               li.dropdown.has-menu.has-mega
-                a.menu-item.js-toogle-menu-mobile(href="#") Tin Tức
+                a.menu-item.js-toogle-submenu-mobile(href="#") Tin Tức
                 ul.sub-level1-menu
                   .mega-wrapper.clearfix
                     .blk-img
@@ -208,100 +210,3 @@ section.header
                         a.sub-item(href="#") Tin tức quận 7
               li.dropdown.has-menu
                 a.menu-item(href="#") Liên Hệ
-      //- .visible-xs
-      //-   .navbar-header.menu-mobile
-      //-     button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#menu-content')
-      //-       span.sr-only Toggle navigation
-      //-       span.icon-bar
-      //-       span.icon-bar
-      //-       span.icon-bar
-      //-     ul#menu-content.menu-mb-list.collapse
-      //-       li.menu-item.level0
-      //-         a(href="").item Home
-      //-         span.btn-sub-mb.collapsed(data-toggle='collapse', data-target='#sub-menu1-level0')
-      //-           i.fa.fa-plus.add-mn.ico
-      //-           i.fa.fa-minus.minus-mn.ico
-      //-         ul#sub-menu1-level0.sub-mb-menu.collapse
-      //-           li.menu-item.level1
-      //-             a.item(href="#") Home1
-      //-           li.menu-item.level1
-      //-             a.item(href="#") Home2
-      //-           li.menu-item.level1
-      //-             a.item(href="#") Home3
-      //-           li.menu-item.level1
-      //-             a.item(href="#") Home4
-      //-           li.menu-item.level1
-      //-             a.item(href="#") Home5
-      //-           li.menu-item.level1
-      //-             a.item(href="#") Home6
-      //-       li.menu-item.level0
-      //-         a(href="").item Sản phẩm 
-      //-         span.btn-sub-mb.collapsed(data-toggle='collapse', data-target='#sub-menu2-level0')
-      //-           i.fa.fa-plus.add-mn.ico
-      //-           i.fa.fa-minus.minus-mn.ico
-      //-         ul#sub-menu2-level0.sub-mb-menu.collapse
-      //-           li.menu-item.level1
-      //-             a.item(href="#") Sản phẩm 1
-      //-           li.menu-item.level1
-      //-             a.item(href="#") Sản phẩm 2
-      //-           li.menu-item.level1
-      //-             a.item(href="#") Sản phẩm 3
-      //-           li.menu-item.level1
-      //-             a.item(href="#") Sản phẩm 4
-      //-           li.menu-item.level1
-      //-             a.item(href="#") Sản phẩm 5
-      //-           li.menu-item.level1
-      //-             a.item(href="#") Sản phẩm 6
-      //-       li.menu-item.level0
-      //-         a(href="").item News
-      //-         span.btn-sub-mb.collapsed(data-toggle='collapse', data-target='#sub-menu3-level0')
-      //-           i.fa.fa-plus.add-mn.ico
-      //-           i.fa.fa-minus.minus-mn.ico
-      //-         ul#sub-menu3-level0.sub-mb-menu.collapse
-      //-           li.menu-item.level1
-      //-             a.item(href="#") News1
-      //-           li.menu-item.level1
-      //-             a.item(href="#") News2
-      //-           li.menu-item.level1
-      //-             a.item(href="#") News3
-      //-           li.menu-item.level1
-      //-             a.item(href="#") News4
-      //-           li.menu-item.level1
-      //-             a.item(href="#") News5
-      //-           li.menu-item.level1
-      //-             a.item(href="#") News6
-      //-       li.menu-item.level0
-      //-         a(href="").item Contact
-      //-         //- span.btn-sub-mb
-      //-         //-   i.fa.fa-plus.add-mn
-      //-         //-   i.fa.fa-minus.minus-mn
-      //-       li.menu-item.level0
-      //-         a(href="").item About us
-      //-         //- span.btn-sub-mb
-      //-         //-   i.fa.fa-plus.add-mn
-      //-         //-   i.fa.fa-minus.minus-mn
-      //-       li.menu-item.level0
-      //-         a(href="").item Sale
-      //-         //- span.btn-sub-mb
-      //-         //-   i.fa.fa-plus.add-mn
-      //-         //-   i.fa.fa-minus.minus-mn
-      //-       li.menu-item.level0
-      //-         a(href="").item Store
-      //-         //- span.btn-sub-mb
-      //-         //-   i.fa.fa-plus.add-mn
-      //-         //-   i.fa.fa-minus.minus-mn
-      //-     .menu-logo
-      //-       a.logo(href="#")
-      //-         img(src="../../assets/images/icons/logo.png")
-      //-     ul.mobile-right.clearfix
-      //-       li.icon.search-button
-      //-         button.btn-search(href="#" data-toggle="collapse" data-target="#search-form")
-      //-           i.fa.fa-search.ico
-      //-         form#search-form.mobile-search.collapse
-      //-           input.search-box(type="text" placeholder="Enter to search...")
-      //-       li.icon
-      //-         a(href="#")
-      //-           i.fa.fa-user.ico
-      //-       li.icon
-      //-         a(href="#")
-      //-           i.fa.fa-heart.ico

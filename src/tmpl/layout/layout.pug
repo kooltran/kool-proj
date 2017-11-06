@@ -4,12 +4,13 @@ html(xmlns='http://www.w3.org/1999/xhtml')
   include ./head
 
   body
-    header
-      include ../components/nav
-    main.container-fluid
-      block content
-    footer
-      include ../components/footer
+    .main-wrapper.js-menu-slideout
+      header
+        include ../components/nav
+      main.container-fluid
+        block content
+      footer
+        include ../components/footer
         
 
     include ./scripts
