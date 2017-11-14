@@ -22,7 +22,7 @@ section.header
               li.icon
                 a(href="#")
                   i.fa.fa-heart.ico
-      .header-menu.clearfix
+      .container.header-menu.clearfix(data-spy="affix" data-offset-top="52")
         .col-lg-5.col-md-3.col-sm-3.col-xs-12
           .mobile-burger
             button.btn-burger.navbar-toggle.js-toggle-menu-mobile
@@ -30,7 +30,7 @@ section.header
               span.icon-bar.first
               span.icon-bar.second
               span.icon-bar.third
-          .header-logo.mobile-logo
+          .header-logo.mobile-logo.js-header-log
             a.logo(href="#")
               img(src="../../assets/images/icons/home_logo.png")
           ul.mobile-right.clearfix
@@ -48,8 +48,10 @@ section.header
         .col-lg-7.col-md-9.col-sm-9.col-xs-12
           .mb-menu-mask
           .mega-menu.clearfix
+            button.btn-back-menu.js-btn-back-mn
+              i.fa.fa-angle-left
+            p.mb-menu-title.visible-xs Menu
             ul.pull-right.main-menu.clearfix
-              p.mb-menu-title.visible-xs Menu
               li.dropdown.has-menu
                 a.menu-item(href="#") Trang Chủ
               li.dropdown.has-menu.has-mega

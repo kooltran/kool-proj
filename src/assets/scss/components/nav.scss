@@ -24,10 +24,6 @@
     }
   }
 
-  &-menu {
-    border-bottom: 1px solid $color-gray47;
-  }
-
   &-search {
     position: relative;
     display: inline-block;
@@ -66,10 +62,32 @@
   }
 
   &-menu {
+    border-bottom: 1px solid $color-gray47;
+    background-color: $color-black;
+    padding: 0;
+
+    &.affix {
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      z-index: 1005;
+
+      .mega-menu {
+        .main-menu {
+          margin-top: 15px;
+        }
+      }
+    }
+
     .mega-menu {
       position: relative;
       float: right;
       margin-right: -25px;
+
+      .btn-back-menu{
+        display: none;
+      }
 
       .main-menu {
         margin-top: 35px;
@@ -175,7 +193,7 @@
                     &:after {
                       display: inline-block;
                       position: absolute;
-                      top: 8px;
+                      top: 0;
                       line-height: 15px;
                       right: 2px;
                       font-size: 12px;
@@ -277,13 +295,13 @@
         z-index: 1000;
 
         input {
-          background: transparent;
+          background: $color-black;
           border-top: 0;
           border: 1px solid $color-gray60;
           padding: 0 5px;
           line-height: 30px;
           color: $color-gray80;
-          width: 400px;
+          width: 250px;
         }
       }
     }
@@ -351,42 +369,62 @@
         margin: 0;
         z-index: 1001;
 
+        .mb-menu-title {
+          text-align: center;
+          color: $color-black;
+          border-bottom: 1px solid $color-gray47;
+          padding: 15px 0;
+        }
+
+        .btn-back-menu {
+          display: none;
+          position: absolute;
+          top: -3px;
+          background-color: transparent;
+          color: $color-black;
+          outline: none;
+          border: 0;
+          border-radius: 0;
+          font-size: 22px;
+          width: 50px;
+          height: 52px;
+          padding: 0 20px 0 0;
+        }
+
         .main-menu {
           float: none !important;
           margin: 0;
-
-          .mb-menu-title {
-            text-align: center;
-            color: $color-black;
-            border-bottom: 1px solid $color-gray47;
-            padding: 15px 0;
-          }
 
           .has-mega {
             position: relative;
 
             &:hover {
               .sub-level1-menu {
-                display: none;
+                transform: translateX(-200%);
               }
             }
 
-            &.active {
-              .menu-item {
-                &:before {
-                  content: "\f068";
-                }
-              }
-            }
+            // &.active {
+            //   .menu-item {
+            //     &:before {
+            //       content: "\f068";
+            //     }
+            //   }
+            // }
 
             .menu-item {
               &:before {
                 position: absolute;
                 top: 0;
-                right: 25px;
+                right: 0;
                 color: $color-black;
+                text-align: center;
                 font-family: 'FontAwesome';
-                content: '\f067';
+                border-left: 1px solid $color-gray47;
+                font-size: 22px;
+                width: 35px;
+                height: 35px;
+                content: '\f105';
               }
             }
           }
@@ -397,7 +435,7 @@
 
             &.active {
               .sub-level1-menu {
-                display: block;
+                transform: translateX(-100%);
               }
             }
 
@@ -418,12 +456,15 @@
             }
 
             .sub-level1-menu {
-              display: none;
-              position: relative;
-              top: 0;
-              left: 0;
-              right: 0;
+              display: block;
+              position: fixed;
+              top: 50px;
+              width: 80%;
+              transform: translateX(-200%);
+              transition: transform .5s;
               background-color: $color-white;
+              border-right: 1px solid $color-gray42;
+              height: 100%;
 
               .mega-wrapper {
                 border: 0;
@@ -436,32 +477,39 @@
 
               .blk-menu {
                 display: block;
-                padding-left: 30px;
+                padding-left: 0;
                 border-bottom: 1px solid $color-gray47;
+                background-color: #fff;
 
                 .has-sub {
                   &:hover {
                     .sub-level2-menu {
-                      display: none;
+                      transform: translateX(-200%);
                     }
                   }
 
-                  &.active {
-                    .sub-item {
-                      &:before {
-                        content: "\f068";
-                      }
-                    }
-                  }
+                  // &.active {
+                  //   .sub-item {
+                  //     &:before {
+                  //       content: "\f068";
+                  //     }
+                  //   }
+                  // }
 
                   .sub-item {
                     &:before {
                       position: absolute;
-                      top: 8px;
-                      right: 25px;
+                      top: 0;
+                      right: 0;
                       color: $color-black;
+                      text-align: center;
                       font-family: 'FontAwesome';
-                      content: '\f067';
+                      border-left: 1px solid $color-gray47;
+                      font-size: 22px;
+                      width: 35px;
+                      height: 35px;
+                      line-height: 35px;
+                      content: '\f105';
                     }
                   }
                 }
@@ -479,7 +527,7 @@
 
                   &.active {
                     .sub-level2-menu {
-                      display: block;
+                      transform: translateX(-100%);
                     }
                   }
 
@@ -490,7 +538,7 @@
                   }
 
                   .sub-item {
-                    padding: 8px 0;
+                    padding: 10px 15px;
                     border-bottom: 1px solid $color-gray47;
                     display: block;
                     color: $color-black;
@@ -498,30 +546,30 @@
                   }
 
                   .sub-level2-menu {
-                    display: none;
-                    position: relative;
-                    top: auto;
-                    left: auto;
-                    padding: 0 20px;
+                    display: block;
+                    position: fixed;
+                    top: 0;
+                    padding: 0;
                     border: none;
+                    border-right: 1px solid $color-gray42;
                     border-bottom: 1px solid $color-gray47;
-                    width: auto;
+                    background-color: $color-white;
+                    width: 100%;
+                    transform: translateX(-200%);
+                    transition: transform .5s;
+                    z-index: 1000;
+                    height: 100%;
 
                     li {
                       display: block;
                       width: auto;
-
-                      &:last-child {
-                        a {
-                          border: 0;
-                        }
-                      }
                     }
 
                     a {
                       border-bottom: 1px solid $color-gray47;
                       color: $color-black;
                       font-size: 13px;
+                      padding-left: 15px;
 
                       &:hover {
                         color: $color-black;
@@ -538,13 +586,15 @@
   }
 }
 
-.main-wrapper {
-  transform: translateX(0);
-  transition: transform .5s ease;
-}
-
 @media(max-width: $screen-sm) {
+  .main-wrapper {
+    transform: translateX(0);
+    transition: transform .5s ease;
+  }
+
   .slide-menu-mb {
+    overflow: hidden;
+
     .main-wrapper {
       transform: translateX(80%);
       transition: transform .5s;

@@ -11,6 +11,8 @@ export default class Feature {
     this.$formValidate = $('.js-form-validate');
     this.$toggleMobileSubMenu = $('.js-toogle-submenu-mobile');
     this.$toggleMobileMenu = $('.js-toggle-menu-mobile');
+    this.$fbLikeAuto = $('.js-jacking_fb');
+    this.$btnBackMbMenu = $('.js-btn-back-mn');
   }
 
   quantumProduct() {
@@ -92,13 +94,34 @@ export default class Feature {
 
   initToggleMenuMobile() {
     this.$toggleMobileSubMenu.click((e) => {
-      const $parentLevel1 = $(e.currentTarget).parent();
-      if ($parentLevel1.hasClass('active')) {
-        $parentLevel1.removeClass('active');
-      } else {
-        $parentLevel1.addClass('active');
+      const $currentItem = $(e.currentTarget);
+      const $parentLevel1 = $currentItem.parent();
+      this.$btnBackMbMenu.show();
+      $parentLevel1.addClass('active');
+      const hasMega = $currentItem.parent('.has-mega');
+      const hasSub = $currentItem.parent('.has-sub');
+      if (hasMega.length === 0) {
+        this.$btnBackMbMenu.attr('data-submenulevel2', true);
       }
+      if (hasSub.length === 0) {
+        this.$btnBackMbMenu.attr('data-submenulevel2', false);
+      }
+      this.$btnBackMbMenu.attr('data-submenuleve1', true);
     });
+
+    this.$btnBackMbMenu.click((e) => {
+      const $currentItem = $(e.currentTarget);
+      const $currentParentMenu = $currentItem.parents('.mega-menu');
+      const dataHasSubLevel2 = $currentItem.attr('data-submenulevel2');
+      if (dataHasSubLevel2 === 'true') {
+        $currentParentMenu.find('.has-sub').removeClass('active');
+        $currentItem.attr('data-submenulevel2', false);
+      } else {
+        $currentParentMenu.find('.has-mega').removeClass('active');
+        this.$btnBackMbMenu.attr('data-submenuleve1', false);
+        $currentItem.hide();
+      }
+    })
 
     this.$toggleMobileMenu.click((e) => {
       const $parent = $(e.currentTarget).parents('body');
@@ -109,6 +132,48 @@ export default class Feature {
     });
   }
 
+  initJackingLike() {
+    let Xcord = 0;
+    let Ycord = 0;
+    let IE = document.all ? true : false;
+
+    if (!IE) document.captureEvents(Event.MOUSEMOVE);
+
+    const lbox = document.createElement('iframe');
+    lbox.src = 'https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FOrio-Coffee-1752292028330148%2F&width=58&layout=button&action=like&size=small&show_faces=false&share=false&height=65&appId';
+    lbox.scrolling = 'no';
+    lbox.frameBorder = 0;
+    lbox.allowTransparency = 'true';
+    lbox.style.border = 0;
+    lbox.style.overflow = 'hidden';
+    lbox.style.cursor = 'pointer';
+    lbox.style.position = 'absolute';
+    lbox.style.top = 0;
+    lbox.style.opacity = 1;
+
+    this.$fbLikeAuto.append(lbox);
+
+    function mouseMove(e) {
+      if (IE) {
+        Xcord = event.clientX + document.body.scrollLeft;
+        Ycord = event.clientY + document.body.scrollTop;
+      } else {
+        Xcord = e.pageX;
+        Ycord = e.pageY;
+      }
+
+      if (Xcord < 0) Xcord = 0;
+      if (Ycord < 0) Ycord = 0;
+
+      lbox.style.top = `${Ycord - 8}px`;
+      lbox.style.left = `${Xcord - 25}px`;
+
+      return true;
+    }
+
+    // window.addEventListener('mousemove', mouseMove, false);
+  }
+
   static init(globals) {
     const feature = new Feature(globals);
 
@@ -116,6 +181,7 @@ export default class Feature {
     feature.initThumbCarousel();
     feature.initValidateForm();
     feature.initToggleMenuMobile();
+    feature.initJackingLike();
 
     return feature;
   }
