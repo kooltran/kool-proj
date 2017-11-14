@@ -1,0 +1,33 @@
+.edit-account {
+  .edit-content {
+    .form-info {
+      input {
+        background-color: transparent;
+        border: 1px solid $color-gray47;
+        border-radius: 0;
+        outline: none;
+      }
+
+      textarea {
+        background-color: transparent;
+        width: 100%;
+        padding: 6px 12px;
+      }
+    }
+
+    .btn-update {
+      background-color: transparent;
+      padding: 6px 12px;
+      border: 1px solid $color-gray47;
+      border-radius: 2px;
+      color: $color-white;
+      outline: none;
+
+      &:hover {
+        background-color: $color-gray47;
+        color: $color-black;
+        transition: all 1s;
+      }
+    }
+  }
+}

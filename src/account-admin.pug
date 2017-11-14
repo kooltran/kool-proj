@@ -1,0 +1,45 @@
+extends tmpl/layout/layout.pug
+
+block content
+  section.container.admin-content
+    .row
+      .col-md-3
+        .manager-list
+          ul
+            li
+              a(href="#") thông tin tài khoản
+            li
+              a(href="#") kiểm tra đơn hàng
+            li
+              a(href="#") danh sách yêu thích
+      .col-md-9
+        .account-content
+          h1.page-hello 
+            span despacito xin chào ban,
+            span.account-name Kool
+            a.pull-right.btn-logout(href="#")
+              span
+                i.fa.fa-sign-out
+              | Thoát
+          .customer-info-wrapper
+            h4 Thông tin cá nhân
+            .customer-info
+              .customer-item.customer-name.clearfix
+                label.col-xs-3 Tên:
+                p.col-xs-9 Kool tran
+              .customer-item.customer-email.clearfix
+                label.col-xs-3 Email:
+                p.col-xs-9 Kooltran@gmail.com
+              .customer-item.customer-address.clearfix
+                label.col-xs-3 Địa Chỉ:
+                p.col-xs-9 393 quang trung, phường 9, quận Gò Vấp
+              .customer-item.customer-city.clearfix
+                label.col-xs-3 Thành Phố:
+                p.col-xs-9 Kool tran
+              .customer-item.customer-phone.clearfix
+                label.col-xs-3 Số Điện Thoại:
+                p.col-xs-9 09388738930
+            a.pull-right.edit-info(href="#") 
+              span
+                i.fa.fa-pencil
+              | Edit

@@ -1,0 +1,67 @@
+.admin-content {
+  padding: 30px 0 40px;
+  border-bottom: 1px solid $color-gray47;
+
+  .manager-list {
+    li {
+      a {
+        padding: 10px;
+        text-transform: uppercase;
+        border-bottom: 1px solid $color-gray47;
+        color: $color-white;
+
+        &:hover {
+          color: $color-hotpink;
+        }
+      }
+    }
+  }
+
+  .account-content {
+    .page-hello {
+      color: $color-hotpink;
+      text-transform: uppercase;
+      font-size: 28px;
+      margin-bottom: 20px;
+
+      .btn-logout {
+        font-size: 15px;
+        color: $color-white;
+        margin-top: 10px;
+      }
+    }
+
+    .customer-info-wrapper {
+      h4 {
+        text-transform: uppercase;
+        border-bottom: 1px solid $color-gray47;
+        padding: 5px 0;
+        margin-bottom: 30px;
+      }
+
+      .customer-item {
+        margin-bottom: 15px;
+        label {
+          padding: 0;
+        }
+      }
+
+      .edit-info {
+        display: inline-block;
+        padding: 2px 5px;
+        border: 1px solid $color-gray47;
+        border-radius: 2px;
+        color: $color-white;
+        font-size: 15px;
+
+        span {
+          margin-right: 5px
+        }
+
+        &:hover {
+          color: $color-hotpink;
+        }
+      }
+    }
+  }
+}

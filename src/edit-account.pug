@@ -1,0 +1,29 @@
+extends tmpl/layout/layout.pug
+
+block content
+  section.container.admin-content
+    .row
+      .col-md-3
+        .manager-list
+          ul
+            li
+              a(href="#") thông tin tài khoản
+            li
+              a(href="#") kiểm tra đơn hàng
+            li
+              a(href="#") danh sách yêu thích
+      .col-md-9
+        .edit-account
+          form.edit-content
+            .form-info
+              .form-group
+                input#fullname.form-control(type='text' placeholder="Họ Và Tên" name="checkout-fullname" required)
+              .form-group
+                input#pwd.form-control(type='number' placeholder="Số điện thoại" name="checkout-phonenumb" required)
+              .form-group
+                input#email.form-control(type="email" placeholder="Email" name="checkout-email" required)
+              .form-group
+                input#address.form-control(type="text" placeholder="Đia Chỉ" name="checkout-address" required)
+              .form-group
+                textarea(placeholder="Ghi Chú Đơn Hàng" name="checkout-note")
+            button.btn-update Cập Nhật
