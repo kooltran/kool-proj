@@ -23,7 +23,7 @@ html(lang='en')
   body
     .container
       .success-title
-        a(href="/homepage.html").btn-back-home Quay lại trang chủ
+        a(href="/homepage.html").btn-back-home Về trang chủ
         h1 đặt hàng thành công
       .success-content
         .product-code
@@ -37,4 +37,18 @@ html(lang='en')
             .prod-name
               | sản phẩm ABC
         .product-checkout
-        p.customer-thank
+          p
+            b Giá trị đơn hàng:
+            span.price  600,000đ
+          p
+            b Phí vận chuyển:
+            span.ship-price  20,000đ
+          p
+            b Tổng cộng:
+            span.total-price  620,000đ
+          p
+            b Phương thức thanh toán:
+            span.type-transfer Giao tiền khi nhận hàng
+        p.customer-thank 
+          | Cảm ơn bạn đã mua hàng tại:
+          span Despacito

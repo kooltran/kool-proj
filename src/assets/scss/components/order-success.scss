@@ -3,10 +3,23 @@
   padding: 20px 0;
 
   .btn-back-home {
+    position: relative;
     display: inline-block;
     vertical-align: 10px;
     margin-right: 15px;
     color: $color-white;
+
+    &:before {
+      position: absolute;
+      top: -4px;
+      left: -24px;
+      display: inline-block;
+      background-image: url(../images/icons/icon_back_home.png);
+      width: 17px;
+      height: 24px;
+      background-size: cover;
+      content: ""
+    }
   }
 
   h1 {
@@ -17,6 +30,7 @@
 
 .success-content {
   padding: 20px 30px;
+  margin: 0 100px;
   background-color: $color-white;
   color: $color-black;
 
@@ -25,8 +39,13 @@
   }
 
   .product-content {
+    h4 {
+      font-size: 15px;
+    }
+
     .product-wrapper {
-      margin-top: 10px;
+      padding: 20px;
+      border-bottom: 1px dashed $color-black;
     }
 
     .prod-img {
@@ -39,6 +58,31 @@
 
     .prod-name {
       display: inline-block;
+      vertical-align: top;
+    }
+  }
+
+  .product-checkout {
+    padding: 30px;
+    border-bottom: 1px dashed $color-black;
+
+    p {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    span {
+      float: right;
+    }
+  }
+
+  .customer-thank  {
+    padding: 15px 0;
+    font-size: 15px;
+
+    span {
+      font-weight: 600;
+      color: $color-hotpink;
     }
   }
 }
