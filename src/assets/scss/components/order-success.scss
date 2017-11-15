@@ -1,0 +1,44 @@
+.success-title {
+  text-align: center;
+  padding: 20px 0;
+
+  .btn-back-home {
+    display: inline-block;
+    vertical-align: 10px;
+    margin-right: 15px;
+    color: $color-white;
+  }
+
+  h1 {
+    display: inline-block;
+    text-transform: uppercase;
+  }
+}
+
+.success-content {
+  padding: 20px 30px;
+  background-color: $color-white;
+  color: $color-black;
+
+  .product-code {
+    margin-bottom: 10px;
+  }
+
+  .product-content {
+    .product-wrapper {
+      margin-top: 10px;
+    }
+
+    .prod-img {
+      display: inline-block;
+
+      img {
+        max-height: 100px;
+      }
+    }
+
+    .prod-name {
+      display: inline-block;
+    }
+  }
+}

@@ -95,7 +95,7 @@ export default class Feature {
   initToggleMenuMobile() {
     this.$toggleMobileSubMenu.click((e) => {
       const $currentItem = $(e.currentTarget);
-      const $parentLevel1 = $currentItem.parent();
+      const $parentLevel1 = $currentItem.parents('.js-has-mb-mn');
       this.$btnBackMbMenu.show();
       $parentLevel1.addClass('active');
       const hasMega = $currentItem.parent('.has-mega');

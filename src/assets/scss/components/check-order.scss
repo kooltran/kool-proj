@@ -1,0 +1,27 @@
+.order-content {
+  .order-table {
+    border: 1px solid $color-gray47;
+    table-layout: fixed;
+    font-size: 12px;
+    text-align: center;
+
+    thead {
+      th {
+        text-align: center;
+        border-bottom: 1px solid $color-gray47;
+        border-right: 1px solid $color-gray47;
+        vertical-align: middle;
+      }
+    }
+
+    tbody {
+      td {
+        border-right: 1px solid $color-gray47;
+
+        &:first-child {
+          color: $color-hotpink;
+        }
+      }
+    }
+  }
+}

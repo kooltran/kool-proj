@@ -119,6 +119,10 @@
             }
           }
 
+          .button-sub-menu {
+            display: none;
+          }
+
           .sub-level1-menu {
             display: none;
             position: absolute;
@@ -206,6 +210,10 @@
                   .sub-level2-menu {
                     display: block;
                   }
+                }
+
+                .button-sub-menu {
+                  display: none;
                 }
               }
             }
@@ -412,20 +420,19 @@
             //   }
             // }
 
-            .menu-item {
-              &:before {
-                position: absolute;
-                top: 0;
-                right: 0;
-                color: $color-black;
-                text-align: center;
-                font-family: 'FontAwesome';
-                border-left: 1px solid $color-gray47;
-                font-size: 22px;
-                width: 35px;
-                height: 35px;
-                content: '\f105';
-              }
+            .button-sub-menu {
+              display: block;
+              position: absolute;
+              top: 0;
+              right: 0;
+              color: $color-black;
+              text-align: center;
+              font-family: 'FontAwesome';
+              border-left: 1px solid $color-gray47;
+              font-size: 22px;
+              width: 35px;
+              height: 35px;
+              line-height: 35px;
             }
           }
 
@@ -482,6 +489,8 @@
                 background-color: #fff;
 
                 .has-sub {
+                  position: relative;
+
                   &:hover {
                     .sub-level2-menu {
                       transform: translateX(-200%);
@@ -496,21 +505,19 @@
                   //   }
                   // }
 
-                  .sub-item {
-                    &:before {
-                      position: absolute;
-                      top: 0;
-                      right: 0;
-                      color: $color-black;
-                      text-align: center;
-                      font-family: 'FontAwesome';
-                      border-left: 1px solid $color-gray47;
-                      font-size: 22px;
-                      width: 35px;
-                      height: 35px;
-                      line-height: 35px;
-                      content: '\f105';
-                    }
+                  .button-sub-menu {
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    color: $color-black;
+                    text-align: center;
+                    font-family: 'FontAwesome';
+                    border-left: 1px solid $color-gray47;
+                    font-size: 22px;
+                    width: 35px;
+                    height: 35px;
+                    line-height: 35px;
                   }
                 }
 
