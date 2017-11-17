@@ -1,7 +1,7 @@
 extends tmpl/layout/layout.pug
 
 block content
-  section.container.collection
+  section.collection
     .collection-top
       .breadscrumb
         ul.breadscrumb-wrapper
@@ -141,4 +141,56 @@ block content
               .prod-id SP001
               .prod-desc
                 .prod-name Product Sale 4
+                .prod-price 69$
+      section.blk-related-product
+        .blk-title
+          p Có thể bạn sẽ thích
+        .blk-prod-carousel.js-prod-carousel.owl-carousel.owl-theme.carousel
+          .prod-carousel-item
+            a(href="/product-detail.html").prod-box
+              .prod-img
+                img(src="../../assets/images/pages/prod_sale1.jpg", alt="product-img")
+              .prod-id SP001
+              .prod-desc
+                .prod-name Product Sale 1
+                .prod-price 69$
+          .prod-carousel-item
+            a(href="/product-detail.html").prod-box
+              .prod-img
+                img(src="../../assets/images/pages/prod_sale2.jpg", alt="product-img")
+              .prod-id SP001
+              .prod-desc
+                .prod-name Product Sale 2
+                .prod-price 69$
+          .prod-carousel-item
+            a(href="/product-detail.html").prod-box
+              .prod-img
+                img(src="../../assets/images/pages/prod_sale3.jpg", alt="product-img")
+              .prod-id SP001
+              .prod-desc
+                .prod-name Product Sale 3
+                .prod-price 69$
+          .prod-carousel-item
+            a(href="/product-detail.html").prod-box
+              .prod-img
+                img(src="../../assets/images/pages/prod_sale4.jpg", alt="product-img")
+              .prod-id SP001
+              .prod-desc
+                .prod-name Product Sale 4
+                .prod-price 69$
+          .prod-carousel-item
+            a(href="/product-detail.html").prod-box
+              .prod-img
+                img(src="../../assets/images/pages/prod_sale4.jpg", alt="product-img")
+              .prod-id SP001
+              .prod-desc
+                .prod-name Product Sale 4
+                .prod-price 69$
+          .prod-carousel-item
+            a(href="/product-detail.html").prod-box
+              .prod-img
+                img(src="../../assets/images/pages/prod_sale2.jpg", alt="product-img")
+              .prod-id SP001
+              .prod-desc
+                .prod-name Product Sale 2
                 .prod-price 69$

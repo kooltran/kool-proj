@@ -32,7 +32,9 @@
   margin-bottom: 20px;
   color: $color-white;
 
-  &:hover {
+  &:hover,
+  &:active,
+  &:focus {
     color: $color-hotpink;
   }
 }

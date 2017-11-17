@@ -1,7 +1,7 @@
 extends tmpl/layout/layout.pug
 
 block content    
-  section.container.product-detail
+  section.product-detail
     .breadscrumb
       ul.breadscrumb-wrapper
         li.breadscrumb-item
@@ -81,7 +81,7 @@ block content
               input.quantum-text.js-quantum-text(type="text" value="0" min="0")
               a.btn-add.js-btn-add(href="javascript:;") +
           .detail-addtocart
-            button.btn-addtocart Thêm vào giỏ hàng
+            a(href="/checkout.html").btn-addtocart Thêm vào giỏ hàng
           .detail-more-info
             ul.info-list
               li Hỗ trợ chăm sóc khách hàng miễn phí

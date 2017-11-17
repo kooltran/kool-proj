@@ -1,17 +1,17 @@
 extends tmpl/layout/layout.pug
 
 block content
-  .container.homepage-content
+  .homepage-content
     section.homepage-carousel
       .js-homepage-carousel.owl-carousel.owl-theme.carousel
         .item
           img(src="../../assets/images/pages/home_slider1.jpg", alt="home-slider1")
         .item
           img(src="../../assets/images/pages/home_slider2.jpg", alt="home-slider2")
-    section.container.product-banner
+    section.product-banner
       .row
         .col-md-6.col-sm-6
-          .flash-prod.prod-box
+          a(href="/product-detail.html").flash-prod.prod-box
             .prod-counter.clearfix
               .countdown-title
               .countdown-timer
@@ -29,7 +29,7 @@ block content
               .prod-name Product 1
               .prod-price 69$
         .col-md-6.col-sm-6
-          .hot-prod.prod-box
+          a(href="/product-detail.html").hot-prod.prod-box
             .prod-counter.clearfix
               .countdown-title
               .countdown-timer
@@ -46,38 +46,38 @@ block content
             .prod-desc
               .prod-name Product 2
               .prod-price 96$
-    section.container-fluid.product-list
+    section.product-list
       .row
         .col-md-4.col-sm-6.col-xs-6
           .prod-content
-            a(href="#", target="_blank")
+            a(href="/collection.html", target="_blank")
               img(src="../../assets/images/pages/prod_thumbnail1.jpg", alt="")
-              p.prod-name PRODUCT 1
+              p.prod-name SẢN PHẨM 1
         .col-md-4.col-sm-6.col-xs-6
           .prod-content
-            a(href="#", target="_blank")
+            a(href="/collection.html", target="_blank")
               img(src="../../assets/images/pages/prod_thumbnail2.jpg", alt="")
-              p.prod-name PRODUCT 2
+              p.prod-name SẢN PHẨM 2
         .col-md-4.col-sm-6.col-xs-6
           .prod-content
-            a(href="#", target="_blank")
+            a(href="/collection.html", target="_blank")
               img(src="../../assets/images/pages/prod_thumbnail3.jpg", alt="")
-              p.prod-name PRODUCT 3
+              p.prod-name SẢN PHẨM 3
         .col-md-4.col-sm-6.col-xs-6
           .prod-content
-            a(href="#", target="_blank")
+            a(href="/collection.html", target="_blank")
               img(src="../../assets/images/pages/prod_thumbnail1.jpg", alt="")
-              p.prod-name PRODUCT 4
+              p.prod-name SẢN PHẨM 4
         .col-md-4.col-sm-6.col-xs-6
           .prod-content
-            a(href="#", target="_blank")
+            a(href="/collection.html", target="_blank")
               img(src="../../assets/images/pages/prod_thumbnail2.jpg", alt="")
-              p.prod-name PRODUCT 5
+              p.prod-name SẢN PHẨM 5
         .col-md-4.col-sm-6.col-xs-6
           .prod-content
-            a(href="#", target="_blank")
+            a(href="/collection.html", target="_blank")
               img(src="../../assets/images/pages/prod_thumbnail3.jpg", alt="")
-              p.prod-name PRODUCT 6
+              p.prod-name SẢN PHẨM 6
     section.homepage-banner
       img(src="../../assets/images/pages/home_banner.jpg", alt="home-banner")
     section.container-fluid.product-sale
@@ -85,7 +85,7 @@ block content
         p SALE INFORMATION
       .row
         .col-md-3.col-sm-3.col-xs-6
-          .prod-box
+          a(href="/product-detail.html").prod-box
             .prod-img
               img(src="../../assets/images/pages/prod_sale1.jpg", alt="product-img")
             .prod-id SP001
@@ -93,7 +93,7 @@ block content
               .prod-name Product Sale 1
               .prod-price 69$
         .col-md-3.col-sm-3.col-xs-6
-          .prod-box
+          a(href="/product-detail.html").prod-box
             .prod-img
               img(src="../../assets/images/pages/prod_sale2.jpg", alt="product-img")
             .prod-id SP001
@@ -101,7 +101,7 @@ block content
               .prod-name Product Sale 2
               .prod-price 69$
         .col-md-3.col-sm-3.col-xs-6
-          .prod-box
+          a(href="/product-detail.html").prod-box
             .prod-img
               img(src="../../assets/images/pages/prod_sale3.jpg", alt="product-img")
             .prod-id SP001
@@ -109,7 +109,7 @@ block content
               .prod-name Product Sale 3
               .prod-price 69$
         .col-md-3.col-sm-3.col-xs-6
-          .prod-box
+          a(href="/product-detail.html").prod-box
             .prod-img
               img(src="../../assets/images/pages/prod_sale4.jpg", alt="product-img")
             .prod-id SP001
@@ -117,3 +117,55 @@ block content
               .prod-name Product Sale 4
               .prod-price 69$
     hr.home-border
+    section.blk-related-product
+      .blk-title
+        p Có thể bạn sẽ thích
+      .blk-prod-carousel.js-prod-carousel.owl-carousel.owl-theme.carousel
+        .prod-carousel-item
+          a(href="/product-detail.html").prod-box
+            .prod-img
+              img(src="../../assets/images/pages/prod_sale1.jpg", alt="product-img")
+            .prod-id SP001
+            .prod-desc
+              .prod-name Product Sale 1
+              .prod-price 69$
+        .prod-carousel-item
+          a(href="/product-detail.html").prod-box
+            .prod-img
+              img(src="../../assets/images/pages/prod_sale2.jpg", alt="product-img")
+            .prod-id SP001
+            .prod-desc
+              .prod-name Product Sale 2
+              .prod-price 69$
+        .prod-carousel-item
+          a(href="/product-detail.html").prod-box
+            .prod-img
+              img(src="../../assets/images/pages/prod_sale3.jpg", alt="product-img")
+            .prod-id SP001
+            .prod-desc
+              .prod-name Product Sale 3
+              .prod-price 69$
+        .prod-carousel-item
+          a(href="/product-detail.html").prod-box
+            .prod-img
+              img(src="../../assets/images/pages/prod_sale4.jpg", alt="product-img")
+            .prod-id SP001
+            .prod-desc
+              .prod-name Product Sale 4
+              .prod-price 69$
+        .prod-carousel-item
+          a(href="/product-detail.html").prod-box
+            .prod-img
+              img(src="../../assets/images/pages/prod_sale4.jpg", alt="product-img")
+            .prod-id SP001
+            .prod-desc
+              .prod-name Product Sale 4
+              .prod-price 69$
+        .prod-carousel-item
+          a(href="/product-detail.html").prod-box
+            .prod-img
+              img(src="../../assets/images/pages/prod_sale2.jpg", alt="product-img")
+            .prod-id SP001
+            .prod-desc
+              .prod-name Product Sale 2
+              .prod-price 69$

@@ -81,6 +81,10 @@
         margin: 0 -15px;
         overflow: hidden;
 
+        img {
+          width: 100%;
+        }
+
         a {
           &:hover {
             img {
@@ -156,4 +160,8 @@
       }
     }
   }
+}
+
+.home-border {
+  margin: 0;
 }
